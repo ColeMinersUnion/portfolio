@@ -7,10 +7,15 @@ function App() {
     <>
       <h1>Cole Hansen's Portfolio</h1>
       <div>
-        <h3>About Me</h3>
-        <h3>Education</h3>
-        <h3>Experience</h3>
-        
+        <div>
+          <h1>Page 1: COLE HANSEN</h1>
+        </div>
+        <div>
+          <h1>Page 2: Mini About me</h1>
+        </div>
+        <div>
+          <h1>Page 3: Project Spotlight (from JSON)</h1>
+        </div>
       </div>
     </>
   )

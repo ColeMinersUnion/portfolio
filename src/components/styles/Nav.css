@@ -1,0 +1,53 @@
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.center-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.clink{
+    padding: 0rem 1rem;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.link:visited{
+    color: #000;
+}
+
+.link:hover{
+    color: blue;
+}
+
+#left-line{
+    height: 1px;
+    width: 6rem;
+    background: linear-gradient(to right, #000, #000, #fff);
+}
+
+#right-line{
+    height: 1px;
+    width: 6rem;
+    background: linear-gradient(to left, #000, #000, #fff);
+}
+
+#center-line{
+    height: 1px;
+    width: 24rem;
+    background: linear-gradient(to right,#fff,#000, #000, #000, #fff);
+}
+
