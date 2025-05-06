@@ -1,7 +1,16 @@
 
 import './App.css'
+import { useEffect } from 'react';
+import { useOutletContext } from 'react-router-dom';
 
 function App() {
+
+  const { setBackground } = useOutletContext();
+
+  useEffect(() => {
+    setBackground("bg1"); // Example gradient background
+    return () => setBackground(null); // Clean up when leaving
+  }, []);
 
   return (
     <>
