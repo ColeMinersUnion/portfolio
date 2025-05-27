@@ -8,7 +8,7 @@ function App() {
   const { setBackground } = useOutletContext();
 
   useEffect(() => {
-    setBackground("bg1"); // Example gradient background
+    setBackground("bg bg1"); // Example gradient background
     return () => setBackground(null); // Clean up when leaving
   }, []);
 
