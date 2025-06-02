@@ -2,6 +2,11 @@
 import './App.css'
 import { useEffect } from 'react';
 import { useOutletContext } from 'react-router-dom';
+import ScrollPage from './pages/templates/Scroll';
+import Splash from './pages/Splash';
+import MiniAbout from './pages/MiniAbout';
+import Spotlight from './pages/Spotlight';
+
 
 function App() {
 
@@ -14,18 +19,23 @@ function App() {
 
   return (
     <>
-      <h1>Cole Hansen's Portfolio</h1>
-      <div>
-        <div>
-          <h1>Page 1: COLE HANSEN</h1>
+      <div className="snap-y snap-mandatory overflow-y-scroll h-screen ">
+            <div className="snap-always snap-center">
+              <ScrollPage>
+                <Splash />
+              </ScrollPage> 
+            </div>
+            <div className="snap-always snap-center" >
+              <ScrollPage>
+                <MiniAbout />
+              </ScrollPage> 
+            </div>
+            <div className="snap-always snap-center" >
+              <ScrollPage>
+                <Spotlight />
+              </ScrollPage> 
+            </div>
         </div>
-        <div>
-          <h1>Page 2: Mini About me</h1>
-        </div>
-        <div>
-          <h1>Page 3: Project Spotlight (from JSON)</h1>
-        </div>
-      </div>
     </>
   )
 }
