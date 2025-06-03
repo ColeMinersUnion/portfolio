@@ -1,20 +1,19 @@
 import "./styles/splash.css";
+import { useLoader } from '@react-three/fiber'
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+
+
+function ball(){
+  const gltf = useLoader(GLTFLoader, '../assets/models/basketball.glb')
+  return <primitive object={gltf.scene} />
+}
+
 
 export default function Splash(props) {
     return (
         <>
         <div className="splash-container">
-            <div className="splash-bg">
-                (/* Three js bg? */)
-            </div>
-            <div className="splash-text">
-                <h1 className="big-text">
-                    COLE
-                </h1>
-                <h1 className="big-text">
-                    HANSEN
-                </h1>
-            </div>
+            
         </div>
             
         </>
