@@ -11,10 +11,13 @@ import About from './pages/About.jsx'
 //Projects
 import Projects from './pages/projects/Projects.jsx'
 //Project Groups
+//Projects I was paid to do (mostly IDEA)
 import Work from './pages/projects/Work/Work.jsx'
 
-
+//Projects I did to learn or for fun
 import Personal from './pages/projects/Personal/Personal.jsx'
+
+//Projects I did for class credit
 import Class from './pages/projects/Class/Class.jsx'
 import LightSwitch from './pages/projects/Class/SmartLightSwitch.jsx'
 import WebServer from './pages/projects/Class/WebServer.jsx'
@@ -69,7 +72,7 @@ const BlankLayout = () => {
       )}
 
       {/* Content & overlays */}
-      <div className="relative z-10">
+      <div className="relative z-8">
         <Outlet context={{setBackground}}/>
       </div>
     </div>
@@ -91,7 +94,7 @@ const ProjectLayout = () => {
       )}
 
       {/* Content & overlays */}
-      <div className="relative z-10">
+      <div className="relative z-9">
         <Link to="/projects" className="">Back to Projects</Link>
         <Outlet context={{setBackground}}/>
       </div>
@@ -114,7 +117,7 @@ const WorkshopLayout = () => {
       )}
 
       {/* Content & overlays */}
-      <div className="relative z-10">
+      <div className="relative z-9">
         <Link to="/workshops" className="">Back to Workshops</Link>
         <Outlet context={{setBackground}}/>
       </div>
@@ -194,7 +197,7 @@ const router = createBrowserRouter([
           {
             path: '/workshops',
             element: <Workshops />,
-          }
+          },
         ]
       },
       {

@@ -1,41 +1,8 @@
 # Notes!
 
-# Pages
+I need to fix the set background hook in main.jsx layouts. I either neet to abandon the main layout for other examples or learn how context works. 
 
-## Index
-
-## Contact
-
-## About (or just index)
-
-# Sections
-
-## Projects
-Do i split up my personal, class and work projects?
-
-### Personal
-Sprout, use the web page for pictures
---Aqsa website (maybe)--
-This website probably
-Macropad -> I have a model for
-
-### Class
-Web Server and related Stuff
-Smart Light Switch (and accessories)
-Trains perhaps?
-
-### Work
-Pitt-Sense
-Golf (maybe)
-Pothole
-
-## Workshops
-Photos should be in the one drive,
-macropad (probably not)
-intro to arduino
-Machine Learning
-I know I've done more than just these
-
+Learn how to treat the size between the navbar and the bottom of the screen as the viewport for anything except the initial layout
 
 # Inspiration
 
