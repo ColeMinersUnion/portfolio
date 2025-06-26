@@ -12,44 +12,52 @@ import About from './pages/About.jsx'
 import Projects from './pages/projects/Projects.jsx'
 //Project Groups
 import Work from './pages/projects/Work/Work.jsx'
+
+
 import Personal from './pages/projects/Personal/Personal.jsx'
 import Class from './pages/projects/Class/Class.jsx'
+import LightSwitch from './pages/projects/Class/SmartLightSwitch.jsx'
+import WebServer from './pages/projects/Class/WebServer.jsx'
+import Trains from './pages/projects/Class/Trains.jsx'
 
-const Layout = () => {
 
+//Workshops/Makerspace
+import Workshops from './pages/workshops/Workshops.jsx'
+
+//Extra Pages
+import ContactMe from './pages/Contact.jsx'
+
+
+const Layout = () => {  
   const [background, setBackground] = useState(null);
-  
-
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Dynamic background */}
-      {background && (
-        <div className="absolute inset-0 z-0">
-          {typeof background === "string" ? (
-            <div className={background} />
-          ) : (
-            background // JSX like <ThreeScene />
-          )}
+    <>
+      <div className="relative min-h-screen overflow-hidden">
+        {background && (
+          <div className="absolute inset-0 z-0">
+            {typeof background === "string" ? (
+              <div className={background} />
+            ) : (
+              background // JSX like <ThreeScene />
+            )}
+          </div>
+        )}
+      
+        {/* Content & overlays */}
+        <div className="relative z-10">
+          <Navbar />
+          <Outlet context={{setBackground}}/>
+          <Footer />
         </div>
-      )}
-
-      {/* Content & overlays */}
-      <div className="relative z-10">
-        <Navbar />
-        <Outlet context={{setBackground}}/>
-        <Footer />
       </div>
-    </div>
+    </>
   );
 }
 
 const BlankLayout = () => {
   const [background, setBackground] = useState(null);
-  
-
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Dynamic background */}
       {background && (
         <div className="absolute inset-0 z-0">
           {typeof background === "string" ? (
@@ -70,11 +78,8 @@ const BlankLayout = () => {
 
 const ProjectLayout = () => {
   const [background, setBackground] = useState(null);
-  
-
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Dynamic background */}
       {background && (
         <div className="absolute inset-0 z-0">
           {typeof background === "string" ? (
@@ -88,6 +93,29 @@ const ProjectLayout = () => {
       {/* Content & overlays */}
       <div className="relative z-10">
         <Link to="/projects" className="">Back to Projects</Link>
+        <Outlet context={{setBackground}}/>
+      </div>
+    </div>
+  );
+}
+
+const WorkshopLayout = () => {
+  const [background, setBackground] = useState(null);
+  return (
+    <div className="relative min-h-screen overflow-hidden">
+      {background && (
+        <div className="absolute inset-0 z-0">
+          {typeof background === "string" ? (
+            <div className={background} />
+          ) : (
+            background // JSX like <ThreeScene />
+          )}
+        </div>
+      )}
+
+      {/* Content & overlays */}
+      <div className="relative z-10">
+        <Link to="/workshops" className="">Back to Workshops</Link>
         <Outlet context={{setBackground}}/>
       </div>
     </div>
@@ -132,7 +160,7 @@ const router = createBrowserRouter([
               {
                 path: '/projects/personal',
                 element: <Personal />,
-              }
+              },
             ],
           },
           {
@@ -142,10 +170,36 @@ const router = createBrowserRouter([
               {
                 path: '/projects/academic',
                 element: <Class />,
+              },
+              {
+                path: '/projects/academic/smartlightswitch',
+                element: <LightSwitch />,
+              },
+              {
+                path: '/projects/academic/webserver',
+                element: <WebServer />,
+              },
+              {
+                path: '/projects/academic/trains',
+                element: <Trains />,
               }
             ],
           }
         ],
+      },
+      {
+        path: '/workshops',
+        element: <BlankLayout />,
+        children: [
+          {
+            path: '/workshops',
+            element: <Workshops />,
+          }
+        ]
+      },
+      {
+        path: '/contact',
+        element: <ContactMe />,
       },
       {
         path: '*',

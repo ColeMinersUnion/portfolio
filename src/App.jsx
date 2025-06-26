@@ -27,12 +27,12 @@ function App() {
             </div>
             <div className="snap-always snap-center" >
               <ScrollPage>
-                <MiniAbout />
+                <Spotlight />
               </ScrollPage> 
             </div>
             <div className="snap-always snap-center" >
               <ScrollPage>
-                <Spotlight />
+                <MiniAbout />
               </ScrollPage> 
             </div>
             {/*TODO: This is a comment!*/}
