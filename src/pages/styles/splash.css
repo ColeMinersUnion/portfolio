@@ -1,4 +1,18 @@
-#splash-text {
+
+
+.splash-container{
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.splash-media{
+    overflow: auto;
+
+}
+
+.splash-text {
     font-size: 4rem;
     
 }
