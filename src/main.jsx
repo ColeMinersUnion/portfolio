@@ -26,6 +26,7 @@ import Trains from './pages/projects/Class/Trains.jsx'
 
 //Workshops/Makerspace
 import Workshops from './pages/workshops/Workshops.jsx'
+import ML from './pages/workshops/ML.jsx'
 
 //Extra Pages
 import ContactMe from './pages/Contact.jsx'
@@ -73,7 +74,9 @@ const BlankLayout = () => {
 
       {/* Content & overlays */}
       <div className="relative z-8">
+        <Navbar />
         <Outlet context={{setBackground}}/>
+        <Footer />
       </div>
     </div>
   );
@@ -96,7 +99,9 @@ const ProjectLayout = () => {
       {/* Content & overlays */}
       <div className="relative z-9">
         <Link to="/projects" className="">Back to Projects</Link>
+        <Navbar />
         <Outlet context={{setBackground}}/>
+        <Footer />
       </div>
     </div>
   );
@@ -119,7 +124,9 @@ const WorkshopLayout = () => {
       {/* Content & overlays */}
       <div className="relative z-9">
         <Link to="/workshops" className="">Back to Workshops</Link>
+        <Navbar />
         <Outlet context={{setBackground}}/>
+        <Footer />
       </div>
     </div>
   );
@@ -139,75 +146,57 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: '/projects',
-        element: <BlankLayout />,
-        children: [
-          {
-            path: '/projects/',
-            element: <Projects />,
-          },
-          {
-            path: '/projects/professional',
-            element: <ProjectLayout />,
-            children:[
-              {
-                path: '/projects/professional',
-                element: <Work />,
-              }
-            ],
-          },
-          {
-            path: '/projects/personal',
-            element: <ProjectLayout />,
-            children: [
-              {
-                path: '/projects/personal',
-                element: <Personal />,
-              },
-            ],
-          },
-          {
-            path: '/projects/academic',
-            element: <ProjectLayout />,
-            children: [
-              {
-                path: '/projects/academic',
-                element: <Class />,
-              },
-              {
-                path: '/projects/academic/smartlightswitch',
-                element: <LightSwitch />,
-              },
-              {
-                path: '/projects/academic/webserver',
-                element: <WebServer />,
-              },
-              {
-                path: '/projects/academic/trains',
-                element: <Trains />,
-              }
-            ],
-          }
-        ],
-      },
-      {
-        path: '/workshops',
-        element: <BlankLayout />,
-        children: [
-          {
-            path: '/workshops',
-            element: <Workshops />,
-          },
-        ]
-      },
-      {
         path: '/contact',
         element: <ContactMe />,
       },
       {
         path: '*',
         element: <PageNotFound />,
-      }
+      },
+      {
+        path: '/workshops',
+        element: <Workshops />,
+      },
+      {
+        path: '/workshops/ml',
+        element: <ML />,
+      },
+      {
+        path: '/projects/',
+        element: <Projects />,
+      },
+      {
+        path: '/projects/professional',
+        element: <Work />,
+      },
+      {
+        path: '/projects/professional',
+        element: <ProjectLayout />,
+        
+              
+      },
+      {
+        path: '/projects/personal',
+        element: <Personal />,
+      
+      },
+      {
+        path: '/projects/academic',
+        element: <Class />,
+      },
+      {
+        path: '/projects/academic/smartlightswitch',
+        element: <LightSwitch />,
+      },
+      {
+        path: '/projects/academic/webserver',
+        element: <WebServer />,
+      },
+      {
+        path: '/projects/academic/trains',
+        element: <Trains />,
+      },
+            
   ]}
 ])
 

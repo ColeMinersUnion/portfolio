@@ -4,6 +4,8 @@ I need to fix the set background hook in main.jsx layouts. I either neet to aban
 
 Learn how to treat the size between the navbar and the bottom of the screen as the viewport for anything except the initial layout
 
+
+
 # Inspiration
 
 1. [Astroshock](https://astroshock.com/)
