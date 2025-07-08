@@ -2,7 +2,7 @@
 
 .workshop-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     row-gap: 1rem;
 }
 
@@ -12,5 +12,27 @@
 }
 
 .wcard-body {
-    background: rgba(185, 185, 185, 0.8);
+    background-color: rgba(185, 185, 185, 0.8);
+}
+
+canvas{
+    border: 1px solid black;
+}
+
+.canvasButton{
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    
+    
+    border-radius: 5px;
+    position: relative;
+    border: 3px solid transparent;
+}
+
+.heffect1:hover {
+    
+    
+    border-image: linear-gradient(to right, blue, lightblue);
+    border-image-slice: 1;
+    border-radius: 5px;
 }

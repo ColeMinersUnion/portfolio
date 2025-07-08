@@ -1,8 +1,9 @@
 # Notes!
 
-I need to fix the set background hook in main.jsx layouts. I either neet to abandon the main layout for other examples or learn how context works. 
-
 Learn how to treat the size between the navbar and the bottom of the screen as the viewport for anything except the initial layout
+
+For the drawing in ML.jsx, I need to figure out how to click and drag to draw not just click.
+The compression/scaling stuff isn't working. 
 
 
 

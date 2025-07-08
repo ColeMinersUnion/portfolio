@@ -5,7 +5,7 @@ import './workshop.css';
 
 function Splash(){
     return (
-            <div className="z-2 overflow-hidden">
+            <div className="overflow-hidden">
                 
                 <img src="ML_Teaching.JPG" alt="Teaching Machine Learning" className="w-full" style={{objectFit: 'cover', position: 'absolute'}}/>
                 
