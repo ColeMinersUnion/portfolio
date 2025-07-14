@@ -14,6 +14,8 @@ import Projects from './pages/projects/Projects.jsx'
 //Projects I was paid to do (mostly IDEA)
 import Work from './pages/projects/Work/Work.jsx'
 import Pothole from './pages/projects/Work/Pothole.jsx'
+import PittSense from './pages/projects/Work/PittSense.jsx'
+import Golf from './pages/projects/Work/Golf.jsx'
 
 //Projects I did to learn or for fun
 import Personal from './pages/projects/Personal/Personal.jsx'
@@ -55,7 +57,7 @@ const Layout = () => {
         <div className="relative z-10">
           <Navbar />
           <Outlet context={{setBackground}}/>
-          <Footer />
+          {/*<Footer />*/}
         </div>
       </div>
     </>
@@ -84,7 +86,7 @@ const router = createBrowserRouter([
         path: '*',
         element: <PageNotFound />,
       },
-      {
+      { //!WORKSHOPS BELOW
         path: '/workshops',
         element: <Workshops />,
       },
@@ -96,7 +98,7 @@ const router = createBrowserRouter([
         path: '/projects/',
         element: <Projects />,
       },
-      {
+      { //!WORK PROJECTS
         path: '/projects/professional',
         element: <Work />,
       },
@@ -105,11 +107,19 @@ const router = createBrowserRouter([
         element: <Pothole />,
       },
       {
+        path: '/projects/professional/pittsense',
+        element: <PittSense />,
+      },
+      {
+        path: '/projects/professional/golf',
+        element: <Golf />,
+      },
+      { //!PERSONAL PROJECTS
         path: '/projects/personal',
         element: <Personal />,
       
       },
-      {
+      { //!CLASS PROJECTS
         path: '/projects/academic',
         element: <Class />,
       },

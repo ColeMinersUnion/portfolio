@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-
+import { PotholePreview } from "./Work/Pothole";
+import { PittSensePreview } from "./Work/PittSense";
+import { GolfPreview } from "./Work/Golf";
 
 export default function Projects(props){
 
@@ -16,6 +18,9 @@ export default function Projects(props){
                 <Link to="/projects/professional" className="prj-link">
                     <h3>Professional </h3>
                 </Link>
+                <PotholePreview />
+                <PittSensePreview />
+                <GolfPreview />
                 <Link to="/projects/personal" className="prj-link">
                     <h3>Personal</h3>
                 </Link>
