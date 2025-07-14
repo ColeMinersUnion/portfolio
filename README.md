@@ -1,11 +1,9 @@
 # Notes!
-
-Learn how to treat the size between the navbar and the bottom of the screen as the viewport for anything except the initial layout
-
-For the drawing in ML.jsx, I need to figure out how to click and drag to draw not just click.
-The compression/scaling stuff isn't working. 
-
-
+1. Adjust the Z axis of the navbar. Set an absolute upper corner for the rest of the viewport
+2. Write content for all of the pages. Gather media for projects
+3. Import the model for the macropad, and anything approved from IDEA for release. Order PCB from JLC next paycheck
+4. ...Style
+5. Publish...?
 
 # Inspiration
 

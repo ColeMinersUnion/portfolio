@@ -32,6 +32,8 @@ import Trains from './pages/projects/Class/Trains.jsx'
 //Workshops/Makerspace
 import Workshops from './pages/workshops/Workshops.jsx'
 import ML from './pages/workshops/ML.jsx'
+import {Macropad as MacropadWrkshp} from './pages/workshops/Macropad.jsx'
+import Arduino from './pages/workshops/Arduino.jsx'
 
 //Extra Pages
 import ContactMe from './pages/Contact.jsx'
@@ -89,6 +91,14 @@ const router = createBrowserRouter([
       {
         path: '/workshops/ml',
         element: <ML />,
+      },
+      {
+        path: '/workshops/macropad',
+        element: <MacropadWrkshp />,
+      },
+      {
+        path: '/workshops/arduino',
+        element: <Arduino />,
       },
       {
         path: '/projects/',
