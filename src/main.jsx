@@ -19,16 +19,15 @@ import Golf from './pages/projects/Work/Golf.jsx'
 
 //Projects I did to learn or for fun
 import Personal from './pages/projects/Personal/Personal.jsx'
+import {Macropad as MacropadPrj} from './pages/projects/Personal/Macropad.jsx'
+import Portfolio from './pages/projects/Personal/Portfolio.jsx'
+import Sprout from './pages/projects/Personal/Sprout.jsx'
 
 //Projects I did for class credit
 import Class from './pages/projects/Class/Class.jsx'
 import LightSwitch from './pages/projects/Class/SmartLightSwitch.jsx'
 import WebServer from './pages/projects/Class/WebServer.jsx'
 import Trains from './pages/projects/Class/Trains.jsx'
-
-
-import {Macropad as MacropadPrj} from './pages/projects/Personal/Macropad.jsx'
-
 
 //Workshops/Makerspace
 import Workshops from './pages/workshops/Workshops.jsx'
@@ -82,10 +81,7 @@ const router = createBrowserRouter([
         path: '/contact',
         element: <ContactMe />,
       },
-      {
-        path: '*',
-        element: <PageNotFound />,
-      },
+      
       { //!WORKSHOPS BELOW
         path: '/workshops',
         element: <Workshops />,
@@ -119,6 +115,18 @@ const router = createBrowserRouter([
         element: <Personal />,
       
       },
+      {
+        path: '/projects/personal/macropad',
+        element: <MacropadPrj />,
+      },
+      {
+        path: '/projects/personal/portfolio',
+        element: <Portfolio />
+      },
+      {
+        path: '/projects/personal/sprout',
+        element: <Sprout />
+      },
       { //!CLASS PROJECTS
         path: '/projects/academic',
         element: <Class />,
@@ -135,12 +143,13 @@ const router = createBrowserRouter([
         path: '/projects/academic/trains',
         element: <Trains />,
       },
-      {
-        path: '/projects/personal/macropad',
-        element: <MacropadPrj />,
-      }
+      
             
-  ]}
+  ]},
+  {
+    path: '*',
+    element: <PageNotFound />,
+  },
 ])
 
 createRoot(document.getElementById('root')).render(

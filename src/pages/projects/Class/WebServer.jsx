@@ -1,5 +1,17 @@
+import { Link } from "react-router-dom"
 
-export default function WebServer(props){
+function WebServerPreview(){
+    return(
+        <>
+            <p>C++ WebServer</p>
+            <Link to="/projects/academic/webserver" >
+                Learn More
+            </Link>
+        </>
+    )
+}
+
+function WebServer(){
     return (
         <>
             <div>
@@ -8,3 +20,6 @@ export default function WebServer(props){
         </>
     )
 }
+
+export {WebServerPreview};
+export default WebServer;

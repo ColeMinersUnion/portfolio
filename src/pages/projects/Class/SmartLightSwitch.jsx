@@ -1,5 +1,18 @@
+import { Link } from "react-router-dom";
 
-export default function LightSwitch(props){
+function LightSwitchPreview(){
+    return (
+        <>
+            <p>Custom Smart Light Switch: </p>
+            <Link to="/projects/academic/smartlightswitch">
+                Learn More
+            </Link>
+        </>
+        
+    )
+}
+
+function LightSwitch(){
     return (
         <>
             <div>
@@ -8,3 +21,6 @@ export default function LightSwitch(props){
         </>
     )
 }
+
+export {LightSwitchPreview};
+export default LightSwitch;
